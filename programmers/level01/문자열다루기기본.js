@@ -5,4 +5,8 @@ function solution(s) {
   return answer;
 }
 
+// 숫자 판별 시, isNaN() 함수를 사용하면 안된다.
+// 1e22 를 지수로 체크하기 때문에 조건을 달 수 없다
+// parseInt를 사용해야 함.
+
 // https://programmers.co.kr/learn/courses/30/lessons/12918
