@@ -3,11 +3,10 @@ function solution(s) {
   // 문자열 s를 공백을 기준으로 배열로 변환
   let sArr = s.split(' ');
 
-  // for문을 이용하여 sArr.length로 문자열을 다시 split함
-  for (let i = 0; i < sArr.length; i++) sArr[i] = sArr[i].split('');
-
-  // 이중 for문을 이용하여 배열에 있는 짝수번째 문자를 대문자, 홀수번째 문자를 소문자로 변환한다.
+  // 이중 for문을 이용하여 sArr[i]를 배열로 만들기 위해 다시 split하고
+  // 배열에 있는 짝수번째 문자를 대문자, 홀수번째 문자를 소문자로 변환한다.
   for (let i = 0; i < sArr.length; i++) {
+    sArr[i] = sArr[i].split('');
     for (let j = 0; j < sArr[i].length; j++)
       j % 2 === 0 ? (sArr[i][j] = sArr[i][j].toUpperCase()) : (sArr[i][j] = sArr[i][j].toLowerCase());
   }
@@ -18,6 +17,5 @@ function solution(s) {
   // answer 리턴
   return answer;
 }
-
 // https://programmers.co.kr/learn/courses/30/lessons/12930
 // else문에서 소문자 넣어주지 않으면 테스트 결과 실패로 뜬다
