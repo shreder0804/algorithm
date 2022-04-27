@@ -8,13 +8,8 @@ function solution(s) {
 
   // 이중 for문을 이용하여 배열에 있는 짝수번째 문자를 대문자, 홀수번째 문자를 소문자로 변환한다.
   for (let i = 0; i < sArr.length; i++) {
-    for (let j = 0; j < sArr[i].length; j++) {
-      if (j % 2 === 0) {
-        sArr[i][j] = sArr[i][j].toUpperCase();
-      } else {
-        sArr[i][j] = sArr[i][j].toLowerCase();
-      }
-    }
+    for (let j = 0; j < sArr[i].length; j++)
+      j % 2 === 0 ? (sArr[i][j] = sArr[i][j].toUpperCase()) : (sArr[i][j] = sArr[i][j].toLowerCase());
   }
 
   // sArr을 join하여 문자열로 바꿔주고 정규식을 이용하여 전체 콤마를 제거
