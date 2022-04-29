@@ -14,4 +14,4 @@ function solution(a, b) {
   return answer;
 }
 
-console.log(solution(5, 3));
+// https://programmers.co.kr/learn/courses/30/lessons/12912
