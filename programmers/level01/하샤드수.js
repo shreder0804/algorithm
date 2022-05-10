@@ -15,9 +15,3 @@ function solution(x) {
 }
 
 // https://programmers.co.kr/learn/courses/30/lessons/12947
-console.log(solution(10));
-
-let num = 10;
-let arr02 = String(num).split("");
-
-console.log(arr02);
