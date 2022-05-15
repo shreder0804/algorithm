@@ -1,7 +1,15 @@
 function solution(s, n) {
-  var answer = "";
+  let answer = s
+    .split('')
+    .map((ele) => {
+      if (ele === ' ') return ele;
+      return ele.toUpperCase().charCodeAt() + n > 90
+        ? String.fromCharCode(ele.charCodeAt() + n - 26)
+        : String.fromCharCode(ele.charCodeAt() + n);
+    })
+    .join('');
+
   return answer;
 }
 
-// 아스키코드 변환
-console.log("A".charCodeAt(0));
+// https://programmers.co.kr/learn/courses/30/lessons/12926
