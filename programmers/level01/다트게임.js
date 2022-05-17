@@ -54,3 +54,5 @@ str02 = str02.split(" ");
 
 console.log(str01);
 console.log(str02);
+
+// if문이 많아서 줄이는 방법을 써야할 듯
