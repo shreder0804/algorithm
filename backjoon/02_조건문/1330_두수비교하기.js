@@ -3,6 +3,13 @@ const filePath = process.platform === 'linux' ? '/dev/stdin' : __dirname + '/inp
 const input = fs.readFileSync(filePath).toString().split('\n');
 const A = parseInt(input[0]);
 const B = parseInt(input[1]);
-console.log(A / B);
 
-// https://www.acmicpc.net/submit/1008/50863704
+if (A > B) {
+  console.log('>');
+} else if (A < B) {
+  console.log('<');
+} else if (A === B) {
+  console.log('==');
+}
+
+// https://www.acmicpc.net/submit/1330/50864623
